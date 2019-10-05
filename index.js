@@ -14,7 +14,8 @@ module.exports = {
     jest: true
   },
   globals: {
-    Sentry: "readonly"
+    Sentry: "readonly",
+    enzyme: "readonly"
   },
   rules: {
     "prettier/prettier": "error",
