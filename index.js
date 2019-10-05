@@ -15,7 +15,6 @@ module.exports = {
   },
   globals: {
     Sentry: "readonly",
-    enzyme: "readonly"
   },
   rules: {
     "prettier/prettier": "error",
@@ -32,5 +31,13 @@ module.exports = {
     "react/no-danger": "off",
     "react/forbid-prop-types": "off",
     "react/jsx-props-no-spreading": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.test.js","*.spec.js"],
+      "rules": {
+        "import/no-extraneous-dependencies": "off",
+      }
+    }
+  ]
 };
