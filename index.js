@@ -26,7 +26,6 @@ module.exports = {
         allowChildren: true
       }
     ],
-    "import/no-extraneous-dependencies": ["error", { devDependencies: true }],
     "react/state-in-constructor": "off",
     "react/no-danger": "off",
     "react/forbid-prop-types": "off",
