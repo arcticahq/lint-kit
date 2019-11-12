@@ -28,15 +28,8 @@ module.exports = {
     ],
     "react/state-in-constructor": "off",
     "react/no-danger": "off",
+    "import/no-extraneous-dependencies": "off",
     "react/forbid-prop-types": "off",
     "react/jsx-props-no-spreading": "off"
-  },
-  "overrides": [
-    {
-      "files": ["*.test.js","*.spec.js"],
-      "rules": {
-        "import/no-extraneous-dependencies": "off",
-      }
-    }
-  ]
+  }
 };
