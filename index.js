@@ -6,7 +6,7 @@ module.exports = {
     "prettier/standard",
     "prettier/react"
   ],
-  plugins: ["react", "prettier"],
+  plugins: ["react", "prettier", "react-hooks"],
   env: {
     browser: true,
     es6: true,
