@@ -1,8 +1,11 @@
 {
-  "name": "@arctica/eslint-config",
+  "name": "@arcticahq/eslint-config",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "dependencies": {
     "babel-eslint": "^10.0.3",
     "eslint": "^5.6.0",
