@@ -6,17 +6,17 @@ An opinionated ESLint/Prettier baseline for linting JavaScript projects.
 
 Install the package from the NPM registry:
 
-`npm i @arctica/eslint-config-kit`
+`npm i @arctica/lint-kit`
 
 Add config to your `package.json`:
 
 ```
 "eslintConfig": {
   "extends": [
-    "@arctica/eslint-config-kit"
+    "@arctica/lint-kit"
   ]
 },
-"prettier": "@arctica/eslint-config-kit/prettier.config",
+"prettier": "@arctica/lint-kit/prettier.config",
 "scripts": {
   "lint": "./node_modules/.bin/eslint --ext .js --ignore-pattern public .",
   "lint:fix": "./node_modules/.bin/eslint --fix --ext .js --ignore-pattern public .",
@@ -29,6 +29,7 @@ Add config to your `package.json`:
 To enable automatic formatting on save, install the ESLint and Prettier plugins:
 
 https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+
 https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 
 VS Code: `settings.json`
