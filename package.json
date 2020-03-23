@@ -1,5 +1,5 @@
 {
-  "name": "@arctica/lint-kit",
+  "name": "@arctica/eslint-config-kit",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
