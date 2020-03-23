@@ -1,4 +1,4 @@
-# @arctica/eslint-config
+# @arctica/lint-kit
 
 An opinionated ESLint/Prettier baseline for linting JavaScript projects.
 
