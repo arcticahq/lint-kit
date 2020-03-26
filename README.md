@@ -1,6 +1,14 @@
-# @arctica/lint-kit
+<p align="center">
+  <a href="https://arctica.io">
+    <img alt="Arctica logo" src="https://arctica.io/static/android-chrome-192x192.png" width="60" />
+  </a>
+</p>
 
-An opinionated ESLint/Prettier baseline for linting JavaScript projects.
+<h1 align="center">@arctica/lint-kit</h1>
+
+An opinionated ESLint/Prettier baseline for linting JavaScript projects with support for React, React Hooks and JSX a11y.
+
+This makes maintaining multiple projects easier, and allows us to stop being concerned with code style and instead focus on code quality during code reviews.
 
 ## Usage
 
@@ -11,12 +19,12 @@ Install the package from the NPM registry:
 Add config to your `package.json`:
 
 ```
+"prettier": "@arctica/lint-kit/prettier.config",
 "eslintConfig": {
   "extends": [
-    "@arctica/lint-kit"
+    "./node_modules/@arctica/lint-kit"
   ]
 },
-"prettier": "@arctica/lint-kit/prettier.config",
 "scripts": {
   "lint": "./node_modules/.bin/eslint --ext .js --ignore-pattern public .",
   "lint:fix": "./node_modules/.bin/eslint --fix --ext .js --ignore-pattern public .",
@@ -24,15 +32,34 @@ Add config to your `package.json`:
 
 ```
 
-## Editor config
+`npm run lint` will run both Prettier and ESLint.
 
-To enable automatic formatting on save, install the ESLint and Prettier plugins:
+`npm run lint:fix` will attempt to automatically fix any lint errors.
 
-https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+## Overriding Defaults
 
-https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+### Prettier
 
-VS Code: `settings.json`
+To override Prettier settings, create a `.prettierrc.js` file in the root of your application instead of the reference in `package.json` and add your overrides there.
+
+```
+module.exports = {
+  ...require("@arctica/lint-kit/prettier.config"),
+  semi: true,
+};
+```
+
+### ESlint
+
+To override ESLint settings, create a `.eslintrc` file and add your overrides there.
+
+## Editor Config
+
+### VS Code
+
+To enable automatic formatting on save, install the VS Code [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) plugins.
+
+In your project or global VS Code `settings.json` file, add:
 
 ```
 "editor.defaultFormatter": "esbenp.prettier-vscode",
