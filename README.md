@@ -18,7 +18,7 @@ Install the package from the NPM registry:
 
 Add config to your `package.json`:
 
-```
+```JSON
 "prettier": "@arctica/lint-kit/prettier.config",
 "eslintConfig": {
   "extends": [
@@ -27,9 +27,8 @@ Add config to your `package.json`:
 },
 "scripts": {
   "lint": "./node_modules/.bin/eslint --ext .js --ignore-pattern public .",
-  "lint:fix": "./node_modules/.bin/eslint --fix --ext .js --ignore-pattern public .",
+  "lint:fix": "./node_modules/.bin/eslint --fix --ext .js --ignore-pattern public ."
 }
-
 ```
 
 `npm run lint` will run both Prettier and ESLint.
@@ -42,11 +41,11 @@ Add config to your `package.json`:
 
 To override Prettier settings, create a `.prettierrc.js` file in the root of your application instead of the reference in `package.json` and add your overrides there.
 
-```
+```javascript
 module.exports = {
   ...require("@arctica/lint-kit/prettier.config"),
   semi: true,
-};
+}
 ```
 
 ### ESlint
@@ -61,7 +60,7 @@ To enable automatic formatting on save, install the VS Code [ESLint](https://mar
 
 In your project or global VS Code `settings.json` file, add:
 
-```
+```JSON
 "editor.defaultFormatter": "esbenp.prettier-vscode",
 "editor.formatOnSave": true,
 "editor.codeActionsOnSave": {
