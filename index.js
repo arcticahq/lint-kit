@@ -2,16 +2,17 @@ module.exports = {
   parser: "babel-eslint",
   extends: [
     "airbnb",
+    "plugin:mdx/recommended",
     "prettier",
     "prettier/standard",
-    "prettier/react"
+    "prettier/react",
   ],
   plugins: ["react", "react-hooks", "prettier"],
   env: {
     browser: true,
     es6: true,
     node: true,
-    jest: true
+    jest: true,
   },
   globals: {
     Sentry: "readonly",
@@ -23,13 +24,13 @@ module.exports = {
       2,
       {
         required: { every: ["nesting"] },
-        allowChildren: true
-      }
+        allowChildren: true,
+      },
     ],
     "react/state-in-constructor": "off",
     "react/no-danger": "off",
     "import/no-extraneous-dependencies": "off",
     "react/forbid-prop-types": "off",
-    "react/jsx-props-no-spreading": "off"
-  }
-};
+    "react/jsx-props-no-spreading": "off",
+  },
+}
