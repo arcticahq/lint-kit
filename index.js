@@ -22,7 +22,10 @@ module.exports = {
   ignorePatterns: [`public`, `storybook`, `coverage`],
   rules: {
     "prettier/prettier": "error",
-    "react/jsx-filename-extension": [1, { extensions: [`.js`] }],
+    "react/jsx-filename-extension": [
+      1,
+      { extensions: [`.js`, ".jsx", ".ts", ".tsx"] },
+    ],
     "jsx-a11y/label-has-for": [
       2,
       {
