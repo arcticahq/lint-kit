@@ -50,6 +50,13 @@ module.exports = {
     "react/forbid-prop-types": "off",
     "react/jsx-props-no-spreading": "off",
   },
+  settings: {
+    "import/resolver": {
+      node: {
+        paths: ["components", "lib", "pages", "src"],
+      },
+    },
+  },
   overrides: [
     {
       files: ["*.md"],
